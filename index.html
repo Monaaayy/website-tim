@@ -9,37 +9,25 @@
 <body>
     <header class="topbar">
         <div class="container topbar__inner">
-            <a class="brand" href="#">
-                <span class="brand__logo">
+            <div class="brand" href="#">
+                <div class="brand__logo">
                     <img src="img/topup.png" alt="Logo TopUp In Aja">
-                </span>
+                </div>
                 <span class="brand__text">TopUp In Aja</span>
-            </a>
-            <nav class="nav">
-                <a href="#games">Game</a>
-                <a href="#cara">Cara</a>
-                <a href="#promo">Promo</a>
-                <a class="btn btn--ghost" href="#topup">TopUp</a>
-            </nav>
+            </div>
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero__grid">
-            <div class="hero__text">
+            <div>
                 <h1>TopUp cepat, aman, dan terpercaya.</h1>
-                <p>
-                    Pilih game, masukkan ID, pilih nominal, bayar, beres.
-                </p>
-                <div class="hero__cta">
-                    <a class="btn btn--primary" href="#topup">Mulai TopUp</a>
-                    <a class="btn btn--ghost" href="#cara">Lihat Cara</a>
-                </div>
-
+                <p class="muted">Website TopUp Aman, Cepat, dan Terpercaya.</p>
+                
                 <div class="hero__badges">
                     <div class="badge">⚡️ Proses cepat</div>
                     <div class="badge">🔒 Aman</div>
-                    <div class="badge">✅ Terpercaya</div>
+                    <div class="badge">💬 Support</div>
                 </div>
             </div>
 
@@ -47,37 +35,95 @@
                 <div class="mini">
                     <div class="mini__top">
                         <div class="pill">Best Seller</div>
-                        <div class="mini__price">Mulai Rp 5.000</div>
+                        <div class="mini__price">Mulai Rp 10.000</div>
                     </div>
-
-                    <div class="mini__list">
-                        <div class="mini__item">
-                            <span>Mobile Legends</span>
-                            <span class="muted">Diamond</span>
-                        </div>
-                        <div class="mini__item">
-                            <span>Free Fire</span>
-                            <span class="muted">Diamond</span>
-                        </div>
-                        <div class="mini__item">
-                            <span>PUBG</span>
-                            <span class="muted">UC</span>
-                        </div>
-                        <div class="mini__item">
-                            <span>Valorant</span>
-                            <span class="muted">Points</span>
-                        </div>
-                        <div class="mini__item">
-                            <span>Genshin</span>
-                            <span class="muted">Genesis Crystals</span>
-                        </div>
-                    </div>
-
-                    
+                    <div id="mini__list"></div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <h2>Pilih Game</h2>
+
+            <div class="grid">
+                <div class="game" data-game="ml">
+                    <div class="game__icon"><img src="img/games/mlbb.jpg"></div>
+                    <div class="game__meta">
+                        <h3>Mobile Legends</h3>
+                        <p>Diamond</p>
+                    </div>
+                    <button class="game__go">Top Up</button>
+                </div>
+
+                <div class="game" data-game="ff">
+                    <div class="game__icon"><img src="img/games/ff.png"></div>
+                    <div class="game__meta">
+                        <h3>Free Fire</h3>
+                        <p>Diamond</p>
+                    </div>
+                    <button class="game__go">Top Up</button>
+                </div>
+
+                <div class="game" data-game="pubg">
+                    <div class="game__icon"><img src="img/games/pubgm.jpg"></div>
+                    <div class="game__meta">
+                        <h3>PUBG Mobile</h3>
+                        <p>UC</p>
+                    </div>
+                    <button class="game__go">Top Up</button>
+                </div>
+
+                <div class="game" data-game="valo">
+                    <div class="game__icon"><img src="img/games/valo.jpg"></div>
+                    <div class="game__meta">
+                        <h3>Valorant</h3>
+                        <p>Valorant Points</p>
+                    </div>
+                    <button class="game__go">Top Up</button>
+                </div>
+
+                <div class="game" data-game="genshin">
+                    <div class="game__icon"><img src="img/games/Genshin.jpg"></div>
+                    <div class="game__meta">
+                        <h3>Genshin Impact</h3>
+                        <p>Genesis Crystal</p>
+                    </div>
+                    <button class="game__go">Top Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--dark" id="topup">
+        <div class="container checkout">
+
+            <div class="card">
+                <h3>Data TopUp</h3>
+                <label class="field">
+                    Game
+                    <select id="gameSelect">
+                        <option value="ml">Mobile Legends</option>
+                        <option value="ff">Free Fire</option>
+                        <option value="pubg">PUBG Mobile</option>
+                        <option value="valo">Valorant</option>
+                        <option value="genshin">Genshin Impact</option>
+                    </select>
+                </label>
+
+                <div class="row">
+                    <label class="field">
+                        User ID
+                        <input type="text" placeholder="Masukkan ID">
+                    </label>
+                    <label class="field">
+                        Server
+                        <input type="text" placeholder="Masukkan Server ID">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
