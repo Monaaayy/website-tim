@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopUp In Aja</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="nav">
+        <div class="nav-left" onclick="location.href='index.html'">
+            <img src="img/topup.png" alt="Logo" class="logo">
+            <span class="brand">TopUp In Aja</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a class="nav-link active" href="index.html">Beranda</a>
+            <a class="nav-link" href="pesanan.html">Pesanan</a>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="slider" id="slider">
+            <img src="img/banner/banner1.jpeg" class="slide active" alt="Banner 1">
+            <img src="img/banner/banner2.png" class="slide" alt="Banner 2">
+            <img src="img/banner/banner3.png" class="slide" alt="Banner 3">
+
+            <button class="slide-btn left" id="prevBtn">‹</button>
+            <button class="slide-btn right" id="nextBtn">›</button>
+            <div class="dots" id="dots"></div>
+        </div>
+
+        <h2 class="section-title">Pilih Game</h2>
+
+        <div class="game-grid">
+            <button class="game-card" onclick="openGame('ml')">
+                <img src="img/games/mlbb.jpg" alt="Mobile Legends">
+                <div class="game-name">Mobile Legends</div>
+            </button>
+            <button class="game-card" onclick="openGame('pubgm')">
+                <img src="img/games/pubgm.jpg" alt="PUBG Mobile">
+                <div class="game-name">PUBG Mobile</div>
+            </button>
+            <button class="game-card" onclick="openGame('ff')">
+                <img src="img/games/ff.png" alt="Free Fire">
+                <div class="game-name">Free Fire</div>
+            </button>
+            <button class="game-card" onclick="openGame('valo')">
+                <img src="img/games/valo.jpg" alt="Valorant">
+                <div class="game-name">Valorant</div>
+            </button>
+            <button class="game-card" onclick="openGame('genshin')">
+                <img src="img/games/Genshin.jpg" alt="Genshin Impact">
+                <div class="game-name">Genshin Impact</div>
+            </button>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div  class="marquee-text">
+            TopUp In Aja - TopUp Murah - TopUp Cepat - TopUp Aman - TopUp Lengkap - TopUp In Aja - TopUp Murah - TopUp Cepat - TopUp Aman - TopUp Lengkap - 
+        </div>
+    </div>
+    <a class="wa-float" href="https://wa.me/62895422945626" target="_blank" rel="noopener">
+        CS WA
+    </a>
+    <script src="js/main.js"></script>
+</body>
+</html>
