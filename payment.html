@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menunggu Pembayaran - TopUp In Aja</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-left" onclick="location.href='index.html'">
+    <img src="img/topup.png" class="logo" alt="Logo">
+    <span class="brand">TopUp In Aja</span>
+  </div>
+
+  <nav class="nav-menu">
+    <a class="nav-link" href="index.html">Beranda</a>
+    <a class="nav-link" href="pesanan.html">Pesanan</a>
+  </nav>
+</header>
+
+<section class="container">
+  <h2>Menunggu Pembayaran</h2>
+
+  <div class="card">
+    <div class="pay-top">
+      <div>
+        <p class="muted">Batas waktu pembayaran</p>
+        <p id="countdown" class="countdown">05:00</p>
+      </div>
+      <div class="badge" id="methodBadge">QRIS</div>
+    </div>
+
+    <div id="orderBox" class="order-box"></div>
+
+    <div class="qr-box">
+      <p class="muted">Scan QR Code di bawah ini untuk membayar</p>
+
+      <img id="qrImg" class="qr-img" src="img/pay/qr-code.png" alt="QR Code">
+
+      <div class="qr-actions">
+        <button type="button" id="saveQrBtn" class="btn">Simpan QR Code</button>
+        <button type="button" id="refreshBtn" class="btn btn-primary">Refresh Pesanan</button>
+      </div>
+
+      <p class="muted small">
+        Setelah pembayaran berhasil, klik <b>Refresh Pesanan</b> untuk konfirmasi.
+      </p>
+    </div>
+
+    <div class="note-box">
+      <h3>Panduan Pembayaran</h3>
+      <ol>
+        <li>Buka aplikasi e-wallet / mobile banking yang mendukung QRIS.</li>
+        <li>Pilih menu <b>Scan</b> lalu scan QR Code di atas.</li>
+        <li>Pastikan nominal sesuai, lalu selesaikan pembayaran.</li>
+        <li>Setelah sukses, kembali dan klik <b>Refresh Pesanan</b>.</li>
+      </ol>
+    </div>
+
+    <a id="csBtn" class="cs-btn" target="_blank" rel="noopener">
+      Chat CS WhatsApp
+    </a>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-text">
+    TopUp In Aja - TopUp Murah - TopUp Cepat - TopUp Aman - TopUp Lengkap -
+    TopUp In Aja - TopUp Murah - TopUp Cepat - TopUp Aman - TopUp Lengkap -
+  </div>
+</div>
+
+<script src="js/payment.js"></script>
+</body>
+</html>
