@@ -148,7 +148,9 @@ input:focus, select:focus{
   box-shadow: 0 0 0 4px rgba(26,124,255,.15);
 }
 
-button{font-family:inherit}
+button{
+  font-family:inherit;
+}
 
 .btn{
   padding:10px 14px;
@@ -160,14 +162,18 @@ button{font-family:inherit}
   font-weight:800;
 }
 
-.btn:hover{background: rgba(255,255,255,.07)}
+.btn:hover{
+  background: rgba(255,255,255,.07);
+}
 
 .btn-primary{
   background: rgba(40,140,255,.9);
   border-color: rgba(40,140,255,.9);
 }
 
-.btn-primary:hover{background: rgba(40,140,255,1)}
+.btn-primary:hover{
+  background: rgba(40,140,255,1);
+}
 
 button[disabled], .btn[disabled]{
   opacity:.5;
@@ -256,7 +262,6 @@ button[disabled], .btn[disabled]{
 .game-name{
   padding:10px 10px 12px;
   font-weight:800;
-  color: var(--text);
 }
 
 .nominal-list{
@@ -266,4 +271,284 @@ button[disabled], .btn[disabled]{
   margin-top:8px;
 }
 
-/* SISANYA TETAP, GA DIUBAH */
+.nominal-btn{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid rgba(60,120,255,.22);
+  background: rgba(10,14,25,.85);
+  color: var(--text);
+  cursor:pointer;
+  font-weight:800;
+  text-align:left;
+}
+
+.nominal-btn:hover{
+  border-color: rgba(26,124,255,.5);
+}
+
+.nominal-btn.active{
+  outline: 2px solid rgba(40,140,255,.9);
+  box-shadow: 0 0 0 4px rgba(40,140,255,.18);
+}
+
+.payment-methods{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:12px;
+  margin-top:10px;
+}
+
+.pay-btn{
+  background: rgba(10,14,25,.9);
+  border: 1px solid rgba(60,120,255,.25);
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:#fff;
+}
+
+.pay-btn img{
+  width:110px;
+  height:50px;
+  object-fit:contain;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+}
+
+.pay-btn span{
+  font-size:12px;
+  opacity:.9;
+  letter-spacing:.5px;
+}
+
+.pay-btn:hover{
+  border-color: rgba(26,124,255,.5);
+}
+
+.pay-btn.active{
+  outline: 2px solid rgba(40,140,255,.9);
+  box-shadow: 0 0 0 4px rgba(40,140,255,.2);
+}
+
+.pay-notice{
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+  color: var(--danger-text);
+  font-size: 13px;
+  display: none;
+}
+
+.order-actions{margin:10px 0 14px}
+.order-list{
+  display:grid;
+  gap:12px;
+}
+
+.order-card{
+  border:1px solid var(--line);
+  background: var(--card);
+  border-radius:16px;
+  padding:14px;
+}
+
+.order-top{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+}
+
+.order-title{font-weight:900}
+.order-meta{color:var(--muted); font-size:13px}
+
+.order-row{
+  margin-top:10px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.chip{
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--line);
+  color:var(--text);
+  font-size:13px;
+}
+
+.pay-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+
+.badge{
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(40,140,255,.18);
+  border: 1px solid rgba(40,140,255,.35);
+  color:#cfe3ff;
+  font-weight:900;
+}
+
+.countdown{
+  font-size:20px;
+  font-weight:900;
+  margin:0;
+}
+
+.order-box{
+  border: 1px solid rgba(60,120,255,.20);
+  border-radius:12px;
+  padding:12px;
+  margin:12px 0;
+  background: rgba(10,14,25,.6);
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:6px 0;
+  border-bottom:1px dashed rgba(255,255,255,.08);
+}
+.row.total{border-bottom:none; padding-top:10px}
+
+.qr-box{
+  text-align:center;
+  padding:12px;
+  border-radius:12px;
+  border: 1px solid rgba(60,120,255,.20);
+  background: rgba(10,14,25,.6);
+}
+
+.qr-img{
+  width: 240px;
+  max-width: 100%;
+  height:auto;
+  border-radius:12px;
+  margin:10px auto;
+  display:block;
+  background:#fff;
+  padding:10px;
+}
+
+.qr-actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.note-box{
+  margin-top:12px;
+  border: 1px solid rgba(60,120,255,.20);
+  border-radius:12px;
+  padding:12px;
+  background: rgba(10,14,25,.6);
+}
+
+.note-box h3{margin:0 0 8px}
+.note-box ol{margin:0; padding-left:18px}
+.note-box li{margin:6px 0; color: var(--muted)}
+
+.cs-btn{
+  margin-top:14px;
+  display:block;
+  text-align:center;
+  padding:12px 14px;
+  border-radius:14px;
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: var(--success-text);
+  text-decoration:none;
+  font-weight:900;
+}
+.cs-btn:hover{
+  background: rgba(0,200,130,.2);
+}
+
+.success-card{
+  text-align:center;
+  padding:20px;
+}
+
+.success-icon{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.success-actions{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.marquee{
+  position:fixed;
+  left:0; right:0;
+  bottom:0;
+  background: linear-gradient(90deg, #0b1a33, #0f2a55, #0b1a33);
+  color: #7dbbff;
+  padding:8px 0;
+  overflow:hidden;
+  z-index:999;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.marquee-text{
+  display:inline-block;
+  white-space:nowrap;
+  font-weight:900;
+  letter-spacing:.4px;
+  animation:scroll 16s linear infinite;
+  text-shadow: 0 0 8px rgba(125,187,255,.35);
+}
+
+@keyframes scroll{
+  from{transform:translateX(100%)}
+  to{transform:translateX(-100%)}
+}
+
+.wa-float{
+  position:fixed;
+  right:16px;
+  bottom:60px;
+  background:#19c37d;
+  color:#062516;
+  text-decoration:none;
+  padding:12px 14px;
+  border-radius:14px;
+  font-weight:900;
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.wa-float:hover{filter:brightness(1.05)}
+
+@media (max-width: 1000px){
+  .game-grid{grid-template-columns: repeat(3, minmax(0,1fr))}
+}
+
+@media (max-width: 560px){
+  .nav{height:60px;}
+  .logo{height:40px;}
+  .brand{font-size:16px;}
+  .slider{height:200px;}
+  .game-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .nominal-list{grid-template-columns: 1fr;}
+  .payment-methods{grid-template-columns: 1fr;}
+  .qr-img{width:220px;}
+}
