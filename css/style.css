@@ -252,7 +252,7 @@ button[disabled], .btn[disabled]{
 }
 .game-card:hover{
   transform: translateY(-3px);
-  border-color: rgba(26,124,255,.35);
+  border-color: rgb(255, 255, 255);
 }
 .game-card img{
   width:100%;
