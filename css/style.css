@@ -262,7 +262,9 @@ button[disabled], .btn[disabled]{
 .game-name{
   padding:10px 10px 12px;
   font-weight:800;
+  color: #ffffff;
 }
+
 
 .nominal-list{
   display:grid;
