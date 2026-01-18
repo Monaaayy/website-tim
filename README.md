@@ -1,8 +1,7 @@
 # TopUp In Aja
 
 ## Deskripsi Singkat
-TopUp In Aja adalah website simulasi layanan top up game online yang menyediakan
-berbagai game populer dengan tampilan modern dan responsif.
+TopUp In Aja adalah website layanan top up game online yang menyediakan berbagai game populer dengan proses cepat dan aman. Website ini menghadirkan layanan top-up otomatis untuk berbagai game online dengan sistem real-time, metode pembayaran fleksibel, serta layanan pelanggan yang siap membantu.  
 
 ## Daftar Anggota
 | Nama | NIM | Username akun GitHub | Tugas setiap anggota tim |
@@ -16,14 +15,13 @@ berbagai game populer dengan tampilan modern dan responsif.
 - HTML 
 - CSS
 - JavaScript
-- Bootstrap 5
-
+  
 ## Fitur Utama
 - Banner slider otomatis
 - Daftar game populer
 - Form top up
 - Modal konfirmasi
-- Teks berjalan (marquee)
+- Teks berjalan 
 - Tombol WhatsApp CS
 
 ## Struktur Folder
@@ -33,9 +31,8 @@ berbagai game populer dengan tampilan modern dan responsif.
 │── README.md
 ├── css
 ├── js
-├── media
-└── lib 
+├── media 
 ```
-
 ## Link Website
 [TopUp In Aja](https://www.example.com) 
+
