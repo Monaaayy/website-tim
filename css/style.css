@@ -554,3 +554,86 @@ button[disabled], .btn[disabled]{
   .payment-methods{grid-template-columns: 1fr;}
   .qr-img{width:220px;}
 }
+
+.game-name {
+  padding: 10px 8px 14px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0,180,255,.35);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,180,255,.35), transparent 70%);
+  filter: blur(90px);
+  transform: translateY(-50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  left: -260px;
+}
+
+body::after {
+  right: -260px;
+}
+
+.game-card {
+  position: relative;
+}
+
+.game-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0,180,255,.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.game-card:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .game-name {
+    font-size: 13px;
+  }
+} 
+
+
