@@ -1,22 +1,24 @@
-:root{
-  --bg:#070b14;
-  --card:#0c1424;
-  --card2:#0b1220;
-  --text:#e9eefc;
-  --muted:#9aa7c2;
-  --line:rgba(255,255,255,.08);
+:root {
+  --bg: #050b18;
+  --card: rgba(10, 20, 40, 0.85);
+  --card2: rgba(8, 16, 32, 0.85);
 
-  --accent:#1a7cff;
-  --accent2:#0ea5ff;
+  --text: #eaf2ff;
+  --muted: #9db4ff;
+  --line: rgba(0, 180, 255, 0.25);
 
-  --danger-bg: rgba(255,80,80,.15);
-  --danger-border: rgba(255,80,80,.35);
+  --accent: #00b4ff;   /* NEON BIRU UTAMA */
+  --accent2: #5ad7ff;  /* BIRU GLOW */
+
+  --danger-bg: rgba(255, 80, 80, .15);
+  --danger-border: rgba(255, 80, 80, .35);
   --danger-text: #ffb3b3;
 
-  --success-bg: rgba(0,200,130,.15);
-  --success-border: rgba(0,200,130,.35);
-  --success-text: #bfffe6;
+  --success-bg: rgba(0, 200, 255, .15);
+  --success-border: rgba(0, 200, 255, .35);
+  --success-text: #bff3ff;
 }
+
 
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -234,12 +236,8 @@ button[disabled], .btn[disabled]{
 }
 .dot.active{background:var(--accent2)}
 
-.game-grid{
-  display:grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
-  gap:14px;
-  margin-top:12px;
-}
+
+
 
 .game-card{
   border:1px solid var(--line);
@@ -254,11 +252,22 @@ button[disabled], .btn[disabled]{
   transform: translateY(-3px);
   border-color: rgb(255, 255, 255);
 }
-.game-card img{
-  width:100%;
-  height:120px;
-  object-fit:cover;
+
+.game-grid{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 10px;
 }
+
+.game-card img{
+  width: 80%;
+  margin: 10px auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: transparent;
+}
+
+
 .game-name{
   padding:10px 10px 12px;
   font-weight:800;
@@ -555,9 +564,119 @@ button[disabled], .btn[disabled]{
   .qr-img{width:220px;}
 }
 
+
+:root {
+  --bg: #072461;
+  --card: rgba(10, 20, 40, 0.85);
+  --card2: rgba(8, 16, 32, 0.85);
+
+  --text: #eaf2ff;
+  --muted: #9db4ff;
+  --line: rgba(0, 180, 255, 0.25);
+
+  --accent: #00b4ff;   /* NEON BIRU UTAMA */
+  --accent2: #5ad7ff;  /* BIRU GLOW */
+
+  --danger-bg: rgba(255, 80, 80, .15);
+  --danger-border: rgba(255, 80, 80, .35);
+  --danger-text: #ffb3b3;
+
+  --success-bg: rgba(0, 200, 255, .15);
+  --success-border: rgba(0, 200, 255, .35);
+  --success-text: #bff3ff;
+}
+
+body {
+  background: linear-gradient(135deg, #050b18, #08142e);
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--text);
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 16px;
+
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 18px rgba(0, 180, 255, 0.45);
+}
+
+.btn {
+  background: var(--accent);
+  color: #001018;
+  border-radius: 14px;
+  font-weight: 800;
+  border: none;
+  padding: 12px 16px;
+  transition: all .25s ease;
+}
+
+.btn:hover {
+  background: var(--accent2);
+  box-shadow: 0 0 12px var(--accent2);
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #00b4ff, #5ad7ff);
+  color: #001018;
+}
+
+input, select {
+  background: rgba(255,255,255,0.08);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  padding: 12px;
+  color: var(--text);
+}
+
+input:focus, select:focus {
+  border-color: var(--accent2);
+  box-shadow: 0 0 10px var(--accent2);
+}
+
+@media (max-width: 900px) {
+  .game-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .game-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .game-name {
+    font-size: 13px;
+  }
+}
+
+
+.game-card {
+  background: rgba(0,0,0,.55);
+  border: 2px solid var(--accent);
+  border-radius: 18px;
+  transition: .3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px var(--accent2);
+}
+
 .game-name {
   padding: 10px 8px 14px;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.7px;
@@ -588,7 +707,7 @@ body::before {
 body::after {
   right: -260px;
 }
-
+ 
 .game-card {
   position: relative;
 }
@@ -611,29 +730,6 @@ body::after {
 .game-card:hover::after {
   opacity: 1;
 }
-
-@media (max-width: 900px) {
-  .game-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
-  .game-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .section-title {
-    font-size: 18px;
-  }
-
-  .game-name {
-    font-size: 13px;
-  }
-} 
-
+ 
+ 
 
